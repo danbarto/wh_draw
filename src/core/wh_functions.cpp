@@ -803,13 +803,44 @@ float deepTag2018 = 0.8365;
     });
 
   std::vector<unsigned> binsSF = {200,300,400,500,600};
-  std::vector<float> const signalSF2016 = {0.99, 1.00, 0.97, 0.91, 0.95};
-  std::vector<float> const signalSF2016_unc = {0.04, 0.06, 0.03, 0.05, 0.04};
-  std::vector<float> const signalSF2017 = {1.05, 1.05, 1.01, 1.06, 1.13};
-  std::vector<float> const signalSF2017_unc = {0.04, 0.02, 0.03, 0.03, 0.05};
-  std::vector<float> const signalSF2018 = {1.32, 1.35, 1.22, 1.31, 1.30};
-  //  std::vector<float> const signalSF2018_unc = {0.05, 0.03, 0.03, 0.04, 0.04};
-  std::vector<float> const signalSF2018_unc = {0.3, 0.3, 0.3, 0.3, 0.3};
+//  std::vector<float> const signalSF2016 = {0.99, 1.00, 0.97, 0.91, 0.95};
+//  std::vector<float> const signalSF2016_unc = {0.04, 0.06, 0.03, 0.05, 0.04};
+//  std::vector<float> const signalSF2017 = {1.05, 1.05, 1.01, 1.06, 1.13};
+//  std::vector<float> const signalSF2017_unc = {0.04, 0.02, 0.03, 0.03, 0.05};
+//  std::vector<float> const signalSF2018 = {1.32, 1.35, 1.22, 1.31, 1.30};
+//  //  std::vector<float> const signalSF2018_unc = {0.05, 0.03, 0.03, 0.04, 0.04};
+//  std::vector<float> const signalSF2018_unc = {0.3, 0.3, 0.3, 0.3, 0.3};
+
+//  std::vector<float> const signalSF_LP_2016 = {0.99, 1.00, 0.97, 0.91, 0.95};     // old
+//  std::vector<float> const signalSF_LP_2016_unc = {0.04, 0.06, 0.03, 0.05, 0.04}; // old
+//  std::vector<float> const signalSF_LP_2017 = {1.05, 1.05, 1.01, 1.06, 1.13};	  // old
+//  std::vector<float> const signalSF_LP_2017_unc = {0.04, 0.02, 0.03, 0.03, 0.05}; // old
+//  std::vector<float> const signalSF_LP_2018 = {1.32, 1.35, 1.22, 1.31, 1.30};	  // old
+//  std::vector<float> const signalSF_LP_2018_unc = {0.05, 0.03, 0.03, 0.04, 0.04}; // old
+// 										  // old
+//wrong  std::vector<float> const signalSF_HP_2016 = {1.06, 1.06, 1.00, 0.98, 1.01};	  // old
+//wrong  std::vector<float> const signalSF_HP_2016_unc = {0.07, 0.06, 0.09, 0.08, 0.05}; // old
+//wrong  std::vector<float> const signalSF_HP_2017 = {0.92, 0.96, 0.99, 1.05, 1.17};	  // old
+//wrong  std::vector<float> const signalSF_HP_2017_unc = {0.08, 0.09, 0.07, 0.07, 0.11}; // old
+//wrong  std::vector<float> const signalSF_HP_2018 = {0.97, 0.85, 1.04, 1.03, 1.03};	  // old
+//wrong  std::vector<float> const signalSF_HP_2018_unc = {0.12, 0.07, 0.09, 0.08, 0.09}; // old
+
+  std::vector<float> const signalSF_LP_2016 = {1.04, 0.97, 1.02, 0.95, 0.98};     // new
+  std::vector<float> const signalSF_LP_2016_unc = {0.11, 0.09, 0.08, 0.10, 0.10}; // new
+  std::vector<float> const signalSF_LP_2017 = {1.01, 1.10, 1.03, 0.95, 0.96};	  // new
+  std::vector<float> const signalSF_LP_2017_unc = {0.11, 0.13, 0.10, 0.12, 0.10}; // new
+  std::vector<float> const signalSF_LP_2018 = {0.91, 1.2, 1.05, 0.93, 1.05};	  // new
+  std::vector<float> const signalSF_LP_2018_unc = {0.12, 0.15, 0.09, 0.10, 0.12}; // new
+ 										  // new
+  std::vector<float> const signalSF_HP_2016 = {1.06, 1.06, 1.00, 0.98, 1.01};	  // new
+  std::vector<float> const signalSF_HP_2016_unc = {0.07, 0.06, 0.09, 0.08, 0.05}; // new
+  std::vector<float> const signalSF_HP_2017 = {0.92, 0.96, 0.99, 1.05, 1.17};	  // new
+  std::vector<float> const signalSF_HP_2017_unc = {0.08, 0.09, 0.07, 0.07, 0.11}; // new
+  std::vector<float> const signalSF_HP_2018 = {0.97, 0.85, 1.04, 1.03, 1.03};	  // new
+  std::vector<float> const signalSF_HP_2018_unc = {0.12, 0.07, 0.09, 0.08, 0.09}; // new
+
+  float const LP_cutoff = 0.8;
+  float const HP_cutoff = 0.97;
 
   std::vector<unsigned> binsEff = {200,400};		     
   std::vector<float> const fastEff2016_750_1 = {0.702, 0.838};
@@ -817,7 +848,8 @@ float deepTag2018 = 0.8365;
   std::vector<float> const fastEff2018_750_1 = {0.816, 0.865};
   std::vector<float> const fullEff2016_750_1 = {0.742, 0.84};
   std::vector<float> const fullEff2018_750_1 = {0.824, 0.909};
-  std::vector<float> const fullEff2017_750_1 = fullEff2018_750_1;//placeholder
+  //  std::vector<float> const fullEff2017_750_1 = fullEff2018_750_1;//placeholder
+  std::vector<float> const fullEff2017_750_1 = {0.7933, 0.88};//placeholder
 
   const NamedFunc signalHiggsMistagSF("signalHiggsMistagSF",[](const Baby &b) -> NamedFunc::ScalarType{
       // based on method 1a of https://twiki.cern.ch/twiki/bin/view/CMS/BTagSFMethods
@@ -871,18 +903,39 @@ float deepTag2018 = 0.8365;
 	    if(2016==b.year()) {
 	      effFast = fastEff2016_750_1[binEff];
 	      effFull = fullEff2016_750_1[binEff];
-	      SFFull = signalSF2016[binSF];
-	      SFFull_unc = signalSF2016_unc[binSF];
+	      if (b.FatJet_deepTagMD_HbbvsQCD()->at(i) >HP_cutoff) {
+		SFFull = signalSF_HP_2016[binSF];
+		SFFull_unc = signalSF_HP_2016_unc[binSF];
+	      } else if (b.FatJet_deepTagMD_HbbvsQCD()->at(i) >LP_cutoff) {
+		SFFull = signalSF_LP_2016[binSF];
+		SFFull_unc = signalSF_LP_2016_unc[binSF];
+	      }
+//	      SFFull = signalSF2016[binSF];
+//	      SFFull_unc = signalSF2016_unc[binSF];
 	    } else if(2017==b.year()) {
 	      effFast = fastEff2017_750_1[binEff];
 	      effFull = fullEff2017_750_1[binEff];
-	      SFFull = signalSF2017[binSF];
-	      SFFull_unc = signalSF2017_unc[binSF];
+	      if (b.FatJet_deepTagMD_HbbvsQCD()->at(i) >HP_cutoff) {
+		SFFull = signalSF_HP_2017[binSF];
+		SFFull_unc = signalSF_HP_2017_unc[binSF];
+	      } else if (b.FatJet_deepTagMD_HbbvsQCD()->at(i) >LP_cutoff) {
+		SFFull = signalSF_LP_2017[binSF];
+		SFFull_unc = signalSF_LP_2017_unc[binSF];
+	      }
+//	      SFFull = signalSF2017[binSF];
+//	      SFFull_unc = signalSF2017_unc[binSF];
 	    } else if(2018==b.year()) {
 	      effFast = fastEff2018_750_1[binEff];
 	      effFull = fullEff2018_750_1[binEff];
-	      SFFull = signalSF2018[binSF];
-	      SFFull_unc = signalSF2018_unc[binSF];	    
+	      if (b.FatJet_deepTagMD_HbbvsQCD()->at(i) >HP_cutoff) {
+		SFFull = signalSF_HP_2018[binSF];
+		SFFull_unc = signalSF_HP_2018_unc[binSF];
+	      } else if (b.FatJet_deepTagMD_HbbvsQCD()->at(i) >LP_cutoff) {
+		SFFull = signalSF_LP_2018[binSF];
+		SFFull_unc = signalSF_LP_2018_unc[binSF];
+	      }
+//	      SFFull = signalSF2018[binSF];
+//	      SFFull_unc = signalSF2018_unc[binSF];	    
 //	    } else { // This should never happen
 	    }
 	    SFFast = effFull/effFast;
@@ -1007,20 +1060,59 @@ float deepTag2018 = 0.8365;
 	    if(2016==b.year()) {
 	      effFast = fastEff2016_750_1[binEff];
 	      effFull = fullEff2016_750_1[binEff];
-	      SFFull = signalSF2016[binSF];
-	      SFFull_unc = signalSF2016_unc[binSF];
+	      if (b.FatJet_deepTagMD_HbbvsQCD()->at(i) >HP_cutoff) {
+		SFFull = signalSF_HP_2016[binSF];
+		SFFull_unc = signalSF_HP_2016_unc[binSF];
+	      } else if (b.FatJet_deepTagMD_HbbvsQCD()->at(i) >LP_cutoff) {
+		SFFull = signalSF_LP_2016[binSF];
+		SFFull_unc = signalSF_LP_2016_unc[binSF];
+	      }
+//	      SFFull = signalSF2016[binSF];
+//	      SFFull_unc = signalSF2016_unc[binSF];
 	    } else if(2017==b.year()) {
 	      effFast = fastEff2017_750_1[binEff];
 	      effFull = fullEff2017_750_1[binEff];
-	      SFFull = signalSF2017[binSF];
-	      SFFull_unc = signalSF2017_unc[binSF];
+	      if (b.FatJet_deepTagMD_HbbvsQCD()->at(i) >HP_cutoff) {
+		SFFull = signalSF_HP_2017[binSF];
+		SFFull_unc = signalSF_HP_2017_unc[binSF];
+	      } else if (b.FatJet_deepTagMD_HbbvsQCD()->at(i) >LP_cutoff) {
+		SFFull = signalSF_LP_2017[binSF];
+		SFFull_unc = signalSF_LP_2017_unc[binSF];
+	      }
+//	      SFFull = signalSF2017[binSF];
+//	      SFFull_unc = signalSF2017_unc[binSF];
 	    } else if(2018==b.year()) {
 	      effFast = fastEff2018_750_1[binEff];
 	      effFull = fullEff2018_750_1[binEff];
-	      SFFull = signalSF2018[binSF];
-	      SFFull_unc = signalSF2018_unc[binSF];	    
+	      if (b.FatJet_deepTagMD_HbbvsQCD()->at(i) >HP_cutoff) {
+		SFFull = signalSF_HP_2018[binSF];
+		SFFull_unc = signalSF_HP_2018_unc[binSF];
+	      } else if (b.FatJet_deepTagMD_HbbvsQCD()->at(i) >LP_cutoff) {
+		SFFull = signalSF_LP_2018[binSF];
+		SFFull_unc = signalSF_LP_2018_unc[binSF];
+	      }
+//	      SFFull = signalSF2018[binSF];
+//	      SFFull_unc = signalSF2018_unc[binSF];	    
 //	    } else { // This should never happen
 	    }
+//
+//	    if(2016==b.year()) {
+//	      effFast = fastEff2016_750_1[binEff];
+//	      effFull = fullEff2016_750_1[binEff];
+//	      SFFull = signalSF2016[binSF];
+//	      SFFull_unc = signalSF2016_unc[binSF];
+//	    } else if(2017==b.year()) {
+//	      effFast = fastEff2017_750_1[binEff];
+//	      effFull = fullEff2017_750_1[binEff];
+//	      SFFull = signalSF2017[binSF];
+//	      SFFull_unc = signalSF2017_unc[binSF];
+//	    } else if(2018==b.year()) {
+//	      effFast = fastEff2018_750_1[binEff];
+//	      effFull = fullEff2018_750_1[binEff];
+//	      SFFull = signalSF2018[binSF];
+//	      SFFull_unc = signalSF2018_unc[binSF];	    
+////	    } else { // This should never happen
+//	    }
 	    SFFast = effFull/effFast;
 	    SFFast_unc = 0.05;
 	    int delta;
@@ -1142,20 +1234,59 @@ float deepTag2018 = 0.8365;
 	    if(2016==b.year()) {
 	      effFast = fastEff2016_750_1[binEff];
 	      effFull = fullEff2016_750_1[binEff];
-	      SFFull = signalSF2016[binSF];
-	      SFFull_unc = signalSF2016_unc[binSF];
+	      if (b.FatJet_deepTagMD_HbbvsQCD()->at(i) >HP_cutoff) {
+		SFFull = signalSF_HP_2016[binSF];
+		SFFull_unc = signalSF_HP_2016_unc[binSF];
+	      } else if (b.FatJet_deepTagMD_HbbvsQCD()->at(i) >LP_cutoff) {
+		SFFull = signalSF_LP_2016[binSF];
+		SFFull_unc = signalSF_LP_2016_unc[binSF];
+	      }
+//	      SFFull = signalSF2016[binSF];
+//	      SFFull_unc = signalSF2016_unc[binSF];
 	    } else if(2017==b.year()) {
 	      effFast = fastEff2017_750_1[binEff];
 	      effFull = fullEff2017_750_1[binEff];
-	      SFFull = signalSF2017[binSF];
-	      SFFull_unc = signalSF2017_unc[binSF];
+	      if (b.FatJet_deepTagMD_HbbvsQCD()->at(i) >HP_cutoff) {
+		SFFull = signalSF_HP_2017[binSF];
+		SFFull_unc = signalSF_HP_2017_unc[binSF];
+	      } else if (b.FatJet_deepTagMD_HbbvsQCD()->at(i) >LP_cutoff) {
+		SFFull = signalSF_LP_2017[binSF];
+		SFFull_unc = signalSF_LP_2017_unc[binSF];
+	      }
+//	      SFFull = signalSF2017[binSF];
+//	      SFFull_unc = signalSF2017_unc[binSF];
 	    } else if(2018==b.year()) {
 	      effFast = fastEff2018_750_1[binEff];
 	      effFull = fullEff2018_750_1[binEff];
-	      SFFull = signalSF2018[binSF];
-	      SFFull_unc = signalSF2018_unc[binSF];	    
+	      if (b.FatJet_deepTagMD_HbbvsQCD()->at(i) >HP_cutoff) {
+		SFFull = signalSF_HP_2018[binSF];
+		SFFull_unc = signalSF_HP_2018_unc[binSF];
+	      } else if (b.FatJet_deepTagMD_HbbvsQCD()->at(i) >LP_cutoff) {
+		SFFull = signalSF_LP_2018[binSF];
+		SFFull_unc = signalSF_LP_2018_unc[binSF];
+	      }
+//	      SFFull = signalSF2018[binSF];
+//	      SFFull_unc = signalSF2018_unc[binSF];	    
 //	    } else { // This should never happen
 	    }
+//
+//	    if(2016==b.year()) {
+//	      effFast = fastEff2016_750_1[binEff];
+//	      effFull = fullEff2016_750_1[binEff];
+//	      SFFull = signalSF2016[binSF];
+//	      SFFull_unc = signalSF2016_unc[binSF];
+//	    } else if(2017==b.year()) {
+//	      effFast = fastEff2017_750_1[binEff];
+//	      effFull = fullEff2017_750_1[binEff];
+//	      SFFull = signalSF2017[binSF];
+//	      SFFull_unc = signalSF2017_unc[binSF];
+//	    } else if(2018==b.year()) {
+//	      effFast = fastEff2018_750_1[binEff];
+//	      effFull = fullEff2018_750_1[binEff];
+//	      SFFull = signalSF2018[binSF];
+//	      SFFull_unc = signalSF2018_unc[binSF];	    
+////	    } else { // This should never happen
+//	    }
 	    SFFast = effFull/effFast;
 	    SFFast_unc = 0.05;
 	    int delta;
@@ -1568,7 +1699,7 @@ float deepTag2018 = 0.8365;
 	printf("More than one Higgs in baby: %d! Check!\n", higgsIdxCount);
       }
       if (0 < higgsIdxCount) { // Only consider scenarios where higgsIdxCount was actually incremented. If you don't, and it wasn't incremented, you'd be finding deltaR for the first particle due to "unsigned higgsIdx = 0;"
-	if (10 == b.SampleType()) {printf("Ok sample type is: %d and higgsIdx is: h%d\n", b.SampleType(), higgsIdx);}
+	//	if (10 == b.SampleType()) {printf("Ok sample type is: %d and higgsIdx is: h%d\n", b.SampleType(), higgsIdx);}
 	//	if (0 == higgsIdx) {printf("0 == higgs but not all the way in %d\n", higgsIdx);}
 	if ((b.FatJet_eta()->size() > 0) && (b.FatJet_phi()->size() > 0) && (b.gen_eta()->size() > 0) && (b.gen_phi()->size() > 0)) {
 	  //	  if (0 == higgsIdx) {printf("TOTAL I'm zero but I'm NOT all the way in %d %d\n", higgsIdx, higgsIdxCount);}				  
@@ -1629,7 +1760,7 @@ float deepTag2018 = 0.8365;
 	printf("More than one Higgs in baby: %d! Check!\n", higgsIdxCount);
       }
       if (0 < higgsIdxCount) { // Only consider scenarios where higgsIdxCount was actually incremented. If you don't, and it wasn't incremented, you'd be finding deltaR for the first particle due to "unsigned higgsIdx = 0;"
-	if (10 == b.SampleType()) {printf("Ok sample type is: %d and higgsIdx is: h%d\n", b.SampleType(), higgsIdx);}
+	//	if (10 == b.SampleType()) {printf("Ok sample type is: %d and higgsIdx is: h%d\n", b.SampleType(), higgsIdx);}
 	//	if (0 == higgsIdx) {printf("0 == higgs but not all the way in %d\n", higgsIdx);}
 	if ((b.FatJet_eta()->size() > 0) && (b.FatJet_phi()->size() > 0) && (b.gen_eta()->size() > 0) && (b.gen_phi()->size() > 0)) {
 	  //	  if (0 == higgsIdx) {printf("HIGGS I'm zero but I'm NOT all the way in %d %d\n", higgsIdx, higgsIdxCount);}				  
